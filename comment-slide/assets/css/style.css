@@ -1,0 +1,159 @@
+@charset "UTF-8";
+/* Biến cục bộ */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6fbff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper h1 {
+  font-size: 3rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.wrapper h1::after {
+  content: "";
+  width: 15rem;
+  height: 0.3rem;
+  background: linear-gradient(to right, #f44336, #9f4db5);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.review-box {
+  width: 90%;
+  max-width: 700px;
+  height: 30rem;
+  border-radius: 10px;
+  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  height: 30rem;
+  padding: 40px;
+  color: #777;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 22px;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
+.card_profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.card_profile h3 {
+  font-size: 23px;
+  color: #f44336;
+  margin-bottom: 8px;
+}
+.card_profile p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.card_profile img {
+  width: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.card::before {
+  content: "";
+  height: 110px;
+  width: 110px;
+  border-bottom-right-radius: 100%;
+  background: #f44336;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#slider {
+  width: 100%;
+  padding-right: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1.25s;
+}
+
+.slidebar {
+  width: 60px;
+  height: 100%;
+  padding: 15px 0;
+  box-sizing: border-box;
+  background: #f44336;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.slidebar img {
+  width: 35px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+::selection {
+  background: coral;
+  color: #fff;
+}
+
+@media screen and (max-width: 414px) {
+  .card {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .card_profile {
+    margin-bottom: 20px;
+  }
+  .card_profile h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .card::before {
+    height: 95px;
+    width: 95px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    padding: 25px;
+    font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .card_profile {
+    margin-bottom: 20px;
+  }
+  .card_profile h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
